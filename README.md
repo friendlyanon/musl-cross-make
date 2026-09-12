@@ -1,4 +1,4 @@
-# qbt-musl-cross-make
+# musl-cross-make
 
 🔵 This project uses a modified version of [musl-cross-make](https://github.com/richfelker/musl-cross-make)
 
