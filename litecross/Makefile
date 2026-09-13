@@ -247,9 +247,6 @@ endif
 # Zlib - conditionally built when ZLIB_SRCDIR is provided
 ifneq ($(ZLIB_SRCDIR),ZLIB_SRCDIR_not_set)
 
-obj_binutils/.lc_configured: | obj_zlib/.lc_built
-obj_gcc/.lc_configured: | obj_zlib/.lc_built
-
 all: zlib
 install: install-zlib
 
@@ -272,12 +269,6 @@ obj_zlib/.lc_built: | obj_zlib/.lc_configured
 	touch $@
 
 install-zlib: | obj_zlib/.lc_built
-
-BINUTILS_CONFIG += --with-system-zlib
-GCC_CONFIG += --with-system-zlib
-
-export LDFLAGS += -L$(CURDIR)/obj_zlib/staged/lib
-export CPPFLAGS += -I$(CURDIR)/obj_zlib/staged/include
 
 endif
 

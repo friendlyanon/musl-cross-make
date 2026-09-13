@@ -43,7 +43,6 @@ COMMON_CONFIG += --enable-threads
 COMMON_CONFIG += --enable-lto
 # with
 COMMON_CONFIG += --with-pic
-COMMON_CONFIG += --with-system-zlib
 # disable
 COMMON_CONFIG += --disable-werror
 COMMON_CONFIG += --disable-multilib
